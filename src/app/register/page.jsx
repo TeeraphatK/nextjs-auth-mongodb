@@ -82,12 +82,9 @@ function RegisterPage() {
       <Navbar />
     <div className="flex items-center justify-center w-full h-screen bg-gray-100">
       <div className="flex w-3/4 max-w-4xl p-6 bg-white rounded-lg shadow-md">
-        {/* ส่วนข้อความ */}
         <div className="flex flex-col items-center justify-center w-1/2 pr-8">
           <h3 className="mb-4 text-2xl font-semibold">สร้างบัญชี</h3>
         </div>
-
-        {/* ด้านขวา: ฟอร์มกรอกข้อมูล */}
         <div className="w-1/2 p-6">
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             {error && (
@@ -121,7 +118,7 @@ function RegisterPage() {
               </>
             )}
 
-            {/* Step 2: วัน, เดือน, ปี, เพศ */}
+             {/* Step 2: วัน, เดือน, ปี, เพศ  */}
             {step === 2 && (
               <>
                 <input
@@ -194,9 +191,7 @@ function RegisterPage() {
               </>
             )}
 
-            {/* ปุ่มถัดไป/ย้อนกลับ */}
             <div className="flex justify-between mt-4">
-              {/* ปุ่มย้อนกลับจะไม่แสดงในขั้นตอนแรก */}
               {step > 1 && (
                 <button type="button" onClick={handlePrevStep} className="px-4 py-2 text-gray-800 bg-gray-300 rounded-md">
                   ย้อนกลับ
